@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodlinfo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="flex-1">
+        <img class="logo" src="/images/Logo.png">
+        <div class="flex-in-1">
+            <div class="dropdown">
+                <button type="button" class="dropbtn">INR</button>
+                <div class="dropdown-content">
+                    <a href="#">INR</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="dropbtn">BTC</button>
+                <div class="dropdown-content">
+                    <a href="#">BTC</a>
+                    <a href="#">ETH</a>
+                    <a href="#">USDT</a>
+                    <a href="#">XRP</a>
+                    <a href="#">TRX</a>
+                    <a href="#">DASH</a>
+                    <a href="#">ZEC</a>
+                    <a href="#">XEM</a>
+                    <a href="#">IOST</a>
+                    <a href="#">WIN</a>
+                    <a href="#">BIT</a>
+                    <a href="#">WRX</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="dropbtn"><a style="text-decoration: none; color: white;"
+                        href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&utm_medium=affiliate&utm_campaign=regnow-btn">BUY
+                        BTC</a></button>
+            </div>
+        </div>
+        <div class="flex-in-2">
+            <button type="button" class="btn-tele"><img class="tele-logo" src="/images/teleimg.png">Connect
+                Telegram</button>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Last</th>
+                    <th>Buy Price</th>
+                    <th>Sell Price</th>
+                    <th>Volume</th>
+                    <th>Base_unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <div>
+                    <%dataList.forEach(data=> {%>
+                        <tr>
+                            <td>#</td>
+                            <td>
+                                <%=data.name %>
+                            </td>
+                            <td>
+                                <%=data.last %>
+                            </td>
+                            <td>
+                                <%=data.buy %>
+                            </td>
+                            <td>
+                                <%=data.sell %>
+                            </td>
+                            <td>
+                                <%=data.volume %>
+                            </td>
+                            <td>
+                                <%=data.base_unit %>
+                            </td>
+                        </tr>
+                        <%})%>
+                </div>
+            </tbody>
+        </table>
+    </div>
+    <!-- <h1>Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{age}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table> -->
+</body>
+
+</html>
